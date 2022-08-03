@@ -100,9 +100,9 @@ foreach($results as $result)
     </div>
 
   <div class="row">
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-12 col-sm-0">
         <?php include('includes/sidebar.php');?>
-      <div class="col-md-8 col-sm-8">
+      <div class="col-md-12 col-sm-0">
 
 
 

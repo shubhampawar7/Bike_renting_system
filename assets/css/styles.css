@@ -196,6 +196,7 @@ blockquote {
 }
 .underline {
 	text-decoration:underline;
+  
   text-align: center;
 }
 .divider {
@@ -278,6 +279,8 @@ blockquote {
   margin: 0;
   vertical-align: middle;
 }
+
+/* confirmed */
 .btn.outline.active-btn {
 	border-color:#089901;
 	color:#089901;
@@ -285,6 +288,27 @@ blockquote {
 .btn.outline.active-btn:hover {
 	background:#089901;
 	color:#fff;
+}
+
+/* nor confirmed */
+.btn.outline.active-btn-con {
+	border-color:#089901;
+	color:blue;
+}
+.btn.outline.active-btn-con:hover {
+	background:#089901;
+	color:blue;
+}
+
+/* cancelled*/
+.btn.outline.active-btn-can {
+	border-color:#089901;
+	color:red;
+}
+.btn.outline.active-btn-can:hover {
+	background:black;
+	color:red;
+  
 }
 
 a,
@@ -3704,7 +3728,9 @@ table.info-tabel tr td {
 /* background color */
 .profile_wrap {
   padding: 16px 5px;
-  /* background-color:#878787 */
+  
+
+  /* background-color: #878787; */
 }
 .profile_nav {
   border-right: 1px solid #c5c5c5;
@@ -3733,6 +3759,9 @@ table.info-tabel tr td {
 }
 .profile_wrap form .form-group {
 	padding:0 25px;
+  text-align: center;
+
+}
   
 /* text color */
 .profile_wrap form .control-label {

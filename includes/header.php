@@ -92,7 +92,8 @@ foreach($results as $result)
 <?php }
 else{
 
-echo "Welcome To Bike rental portal";
+echo '<span style="color:red;  font-size: 17px;">'."CONTACT : 7020567907".'</span';
+
  } ?>
             
           </form>

@@ -46,9 +46,20 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
           <li><a href="page.php?type=terms">Terms of use</a></li>
                <li><a href="admin/">Admin Login</a></li>
           </ul>
+
+          <h4><span style="color:white;">Address :</span></h4>
+         
+         <address>
+        12/B &nbsp Bhel Chowk , Near HDFC Bank,<br>
+        IICMR College,<br>
+        Nigdi,pune-411034<br>
+        INDIA.
+     </address>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15206.650622224715!2d75.91148249999998!3d17.666129500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9e0ffffffff%3A0x1265e81bedabe2f8!2sIICMR%20MCA%20College!5e0!3m2!1sen!2sin!4v1659561829002!5m2!1sen!2sin" width="500" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     
         </div>
 
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-6 col-sm-0">
           <h6>Subscribe Newsletter</h6>
           <div class="newsletter-form">
             <form method="post">
@@ -58,18 +69,8 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
               <button type="submit" name="emailsubscibe" class="btn btn-block">Subscribe <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
             </form>
             <p class="subscribed-text">*We send great deals and latest auto news to our subscribed users very week.</p>
-          </div>
-          <h4><span style="color:white;">Address :</span></h4>
-         
-          <address>
-         12/B &nbsp Bhel Chowk , Near HDFC Bank,<br>
-         IICMR College,<br>
-         Nigdi,pune-411034<br>
-         INDIA.
-      </address>
-      
-      
-         
+          </div>     
+            
         </div>
       </div>
     </div>

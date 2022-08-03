@@ -66,7 +66,7 @@ error_reporting(0);
   <div class="container">
     <div class="section-header text-center">
       <h2>Find the Best <span>Bike For You</span></h2>
-      <p>You will be able to fully enjoy your holiday and your ride! Any problems? Our passionate team will be happy to help you!! No waste of time during your holidays to find a rental point on the spot! No language barrier, thanks to our multilingual team! At the same price you would pay on the spot! We have best bikes with best deals</p>
+      <!-- <p>You will be able to fully enjoy your holiday and your ride! Any problems? Our passionate team will be happy to help you!! No waste of time during your holidays to find a rental point on the spot! No language barrier, thanks to our multilingual team! At the same price you would pay on the spot! We have best bikes with best deals</p> -->
     </div>
     <div class="row">
 

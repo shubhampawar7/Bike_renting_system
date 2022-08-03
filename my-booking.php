@@ -139,22 +139,28 @@ foreach($results as $result)
                 { ?>
                 <div class="vehicle_status"> <a href="#" class="btn outline btn-xs active-btn" alert="con">Confirmed</a>
                            <div class="clearfix"></div>
+                           <b style="color:green;">Contact Owner : 7020567907</b>
+                          
         </div>
+        
 
               <?php } else if($result->Status==2) { ?>
- <div class="vehicle_status"> <a href="#" class="btn outline btn-xs">Cancelled</a>
+ <div class="vehicle_status"> <a href="#" class="btn outline btn-xs active-btn-can">Cancelled</a>
             <div class="clearfix"></div>
+            <b style="color:red;">Sorry For inconvenience...</b>
         </div>
 
 
 
                 <?php } else { ?>
- <div class="vehicle_status"> <a href="#" class="btn outline btn-xs">Not Confirm yet</a>
+ <div class="vehicle_status"> <a href="#" class="btn outline btn-xs active-btn-con">Not Confirm yet</a>
             <div class="clearfix"></div>
+            <b style="color:blue;">Waiting For Response...</b>
         </div>
                 <?php } ?>
        <div style="float: left"><p><b>Message:</b> <?php echo htmlentities($result->message);?> </p></div>
               </li>
+              <hr>
               <?php }} ?>
 
 
