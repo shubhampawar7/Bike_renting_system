@@ -61,7 +61,7 @@ else{
 <!-- /Switcher -->
 
 <!--Header-->
-<?php include('includes/header.php');?>
+<!-- <?php include('includes/header.php');?> -->
 <!--Page Header-->
 <!-- /Header -->
 
@@ -108,10 +108,10 @@ foreach($results as $result)
       </div>
     </div>
     <div class="row">
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-12 col-sm-0">
        <?php include('includes/sidebar.php');?>
 
-      <div class="col-md-6 col-sm-8">
+      <div class="col-md-12 col-sm-0">
         <div class="profile_wrap">
           <h5 class="uppercase underline">My Bookings </h5>
           <div class="my_vehicles_list">
@@ -137,7 +137,7 @@ foreach($results as $result)
                 </div>
                 <?php if($result->Status==1)
                 { ?>
-                <div class="vehicle_status"> <a href="#" class="btn outline btn-xs active-btn">Confirmed</a>
+                <div class="vehicle_status"> <a href="#" class="btn outline btn-xs active-btn" alert="con">Confirmed</a>
                            <div class="clearfix"></div>
         </div>
 

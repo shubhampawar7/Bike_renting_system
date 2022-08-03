@@ -17,7 +17,7 @@ else{
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>Bike Rental Portal | My Testimonials </title>
+<title>Bike Rental Portal | My Feedback </title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <!--Custome Style -->
@@ -55,7 +55,7 @@ else{
 <!-- /Switcher -->
 
 <!--Header-->
-<?php include('includes/header.php');?>
+<!-- <?php include('includes/header.php');?> -->
 <!--Page Header-->
 <section class="page-header profile_page">
   <div class="container">

@@ -92,7 +92,7 @@ $error="Something went wrong. Please try again";
 <!-- /Switcher -->
 
 <!--Header-->
-<?php include('includes/header.php');?>
+<!-- <?php include('includes/header.php');?> -->
 <!-- /Header -->
 
 <!--Page Header-->
@@ -117,7 +117,10 @@ $error="Something went wrong. Please try again";
 <section class="contact_us section-padding">
   <div class="container">
     <div  class="row">
-      <div class="col-md-6">
+      
+      <div class="col-md-6 ">
+        
+      <h3 >Contact Info</h3>
         <h3>Get in touch using the form below</h3>
           <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php }
         else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
@@ -145,8 +148,9 @@ $error="Something went wrong. Please try again";
           </form>
         </div>
       </div>
+    
       <div class="col-md-6">
-        <h3>Contact Info</h3>
+        <h3></h3>
         <div class="contact_detail">
               <?php
 $pagetype=$_GET['type'];

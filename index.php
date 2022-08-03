@@ -13,7 +13,7 @@ error_reporting(0);
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>Bike Rental Portal</title>
+<title>Rent-A-Bike</title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
@@ -38,24 +38,21 @@ error_reporting(0);
 </head>
 <body>
 
-<!-- Start Switcher -->
-<?php include('includes/colorswitcher.php');?>
-<!-- /Switcher -->
 
-<!--Header-->
-<?php include('includes/header.php');?>
+
+<!-- Header-->
+<!-- <?php include('includes/header.php');?> -->
 <!-- /Header -->
-
 <!-- Banners -->
 <section id="banner" class="banner-section">
   <div class="container">
     <div class="div_zindex">
       <div class="row">
-        <div class="col-md-5 col-md-push-7">
+        <div class="col-md-8 col-md-push-3">
           <div class="banner_content">
-            <h1>Find Your Perfect bike</h1>
-            <p>We have more than a thousand bikes for you to choose. </p>
-            <a href="#" class="btn">Read More <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a> </div>
+            <h1 style="  margin-left: -123px; color:white; text-shadow: 0 0 3px black, 0 0 5px black;">Find Your Perfect bike</h1>
+            <!-- <p>We have more than a thousand bikes for you to choose. </p> -->
+            <a href="#new" class="btn">Find Your Bike<span class="triangle-down primary"><i class="fa fa-search" aria-hidden="true"></i></span></a> </div>
         </div>
       </div>
     </div>
@@ -76,7 +73,7 @@ error_reporting(0);
       <!-- Nav tabs -->
       <div class="recent-tab">
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#resentnewcar" role="tab" data-toggle="tab">New Bike</a></li>
+          <li role="presentation" class="active"><a href="#resentnewcar" role="tab" data-toggle="tab" id="new">Select Your Favourite Bike</a></li>
         </ul>
       </div>
       <!-- Recently Listed New Cars -->
@@ -89,7 +86,7 @@ $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 $cnt=1;
 if($query->rowCount() > 0)
-{
+{ 
 foreach($results as $result)
 {
 ?>
@@ -105,7 +102,7 @@ foreach($results as $result)
 </div>
 <div class="car-title-m">
 <h6><a href="vehical-details.php?vhid=<?php echo htmlentities($result->id);?>"><?php echo htmlentities($result->BrandName);?> , <?php echo htmlentities($result->VehiclesTitle);?></a></h6>
-<span class="price">$<?php echo htmlentities($result->PricePerDay);?> /Day</span>
+<span class="price">Rs<?php echo htmlentities($result->PricePerDay);?> /Day</span>
 </div>
 <div class="inventory_info_m">
 <p><?php echo substr($result->VehiclesOverview,0,70);?></p>

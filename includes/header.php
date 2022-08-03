@@ -11,20 +11,12 @@
             <div class="header_widgets">
               <div class="circle_icon"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
               <p class="uppercase_text">For Support Mail us : </p>
-              <a href="mailto:info@example.com">serbermz2020@gmail.com</a> </div>
+              <a href="mailto:info@example.com">G40@gmail.com</a> </div>
             <div class="header_widgets">
               <div class="circle_icon"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
-              <p class="uppercase_text">Service Helpline Call Us: </p>
-              <a href="tel:+639079373999">+639079373999</a> </div>
-            <div class="social-follow">
-              <ul>
-                <li><a href="https://www.campcodes.com/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.campcodes.com/"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.campcodes.com/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.campcodes.com/"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.campcodes.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              </ul>
-            </div>
+              <p class="uppercase_text"> Contact Us: </p>
+              <a href="tel:+639079373999">+91 7020567907</a> </div>
+        
    <?php   if(strlen($_SESSION['login'])==0)
 	{
 ?>
@@ -43,7 +35,10 @@ echo "Welcome To Bike rental portal";
   <!-- Navigation -->
   <nav id="navigation_bar" class="navbar navbar-default">
     <div class="container">
+    
       <div class="navbar-header">
+       <div class="logo"> <a href="index.php"><img src="assets/images/logg2.png" alt="image"/></a> </div>
+       
         <button id="menu_slide" data-target="#navigation" aria-expanded="false" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       </div>
       <div class="header_wrap">
@@ -68,8 +63,8 @@ foreach($results as $result)
             <li><a href="profile.php">Profile Settings</a></li>
               <li><a href="update-password.php">Update Password</a></li>
             <li><a href="my-booking.php">My Booking</a></li>
-            <li><a href="post-testimonial.php">Post a Testimonial</a></li>
-          <li><a href="my-testimonials.php">My Testimonial</a></li>
+            <li><a href="post-testimonial.php">Post a Feedback</a></li>
+          <li><a href="my-testimonials.php">My Feedback</a></li>
             <li><a href="logout.php">Sign Out</a></li>
             <?php } else { ?>
             <li><a href="#loginform"  data-toggle="modal" data-dismiss="modal">Profile Settings</a></li>
@@ -80,29 +75,45 @@ foreach($results as $result)
             <li><a href="#loginform"  data-toggle="modal" data-dismiss="modal">Sign Out</a></li>
             <?php } ?>
           </ul>
-            </li>
+            </li> 
           </ul>
         </div>
+
+<!-- search header -->
         <div class="header_search">
-          <div id="search_toggle"><i class="fa fa-search" aria-hidden="true"></i></div>
+          <!-- <div id="search_toggle"><i class="fa fa-search" aria-hidden="true"></i></div>
           <form action="#" method="get" id="header-search-form">
             <input type="text" placeholder="Search..." class="form-control">
-            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button> -->
+            <?php   if(strlen($_SESSION['login'])==0)
+	{
+?>
+ <div class="login_btn"> <a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login / Register</a> </div>
+<?php }
+else{
+
+echo "Welcome To Bike rental portal";
+ } ?>
+            
           </form>
         </div>
       </div>
+      
+
+
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav">
           <li><a href="index.php">Home</a>    </li>
-
           <li><a href="page.php?type=aboutus">About Us</a></li>
-          <li><a href="bike-listing.php">Bike Listing</a>
+          <!-- <li><a href="bike-listing.php">Bike Listing</a> -->
           <li><a href="page.php?type=faqs">FAQs</a></li>
           <li><a href="contact-us.php">Contact Us</a></li>
 
         </ul>
       </div>
+      
     </div>
+    
   </nav>
   <!-- Navigation end -->
 

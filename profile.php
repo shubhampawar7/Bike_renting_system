@@ -93,7 +93,7 @@ $msg="Profile Updated Successfully";
 <!-- /Switcher -->
 
 <!--Header-->
-<?php include('includes/header.php');?>
+<!-- <?php include('includes/header.php');?> -->
 <!-- /Header -->
 <!--Page Header-->
 <section class="page-header profile_page">
@@ -126,8 +126,8 @@ if($query->rowCount() > 0)
 {
 foreach($results as $result)
 { ?>
-<section class="user_profile inner_pages">
-  <div class="container">
+<section class="user_profile inner_page">
+  <div class="container ">
     <div class="user_profile_info gray-bg padding_4x4_40">
       <div class="upload_user_logo"> <img src="assets/images/dealer-logo.jpg" alt="image">
       </div>
@@ -140,11 +140,11 @@ foreach($results as $result)
     </div>
 
     <div class="row">
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-12" style="display: flex; justify-content: center; ">
         <?php include('includes/sidebar.php');?>
       <div class="col-md-6 col-sm-8">
         <div class="profile_wrap">
-          <h5 class="uppercase underline">Genral Settings</h5>
+          <h5 class="uppercase underline" style="text-align:center;">Genral Settings</h5>
           <?php
          if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
           <form  method="post">
@@ -158,38 +158,38 @@ foreach($results as $result)
              <?php echo htmlentities($result->UpdationDate);?>
             </div>
             <?php } ?>
-            <div class="form-group">
+            <div class="form-group" >
               <label class="control-label">Full Name</label>
-              <input class="form-control white_bg" name="fullname" value="<?php echo htmlentities($result->FullName);?>" id="fullname" type="text"  required>
+              <input class="form-control white_bg " style="border:1px solid black ;"name="fullname" value="<?php echo htmlentities($result->FullName);?>" id="fullname" type="text"  required>
             </div>
-            <div class="form-group">
+            <div class="form-group"> 
               <label class="control-label">Email Address</label>
-              <input class="form-control white_bg" value="<?php echo htmlentities($result->EmailId);?>" name="emailid" id="email" type="email" required readonly>
+              <input class="form-control white_bg" style="border:1px solid black ;" value="<?php echo htmlentities($result->EmailId);?>" name="emailid" id="email" type="email" required readonly>
             </div>
             <div class="form-group">
               <label class="control-label">Phone Number</label>
-              <input class="form-control white_bg" name="mobilenumber" value="<?php echo htmlentities($result->ContactNo);?>" id="phone-number" type="text" required>
+              <input class="form-control white_bg" style="border:1px solid black ;" name="mobilenumber" value="<?php echo htmlentities($result->ContactNo);?>" id="phone-number" type="text" required>
             </div>
             <div class="form-group">
               <label class="control-label">Date of Birth&nbsp;(dd/mm/yyyy)</label>
-              <input class="form-control white_bg" value="<?php echo htmlentities($result->dob);?>" name="dob" placeholder="dd/mm/yyyy" id="birth-date" type="text" >
+              <input class="form-control white_bg" style="border:1px solid black ;" value="<?php echo htmlentities($result->dob);?>" name="dob" placeholder="dd/mm/yyyy" id="birth-date" type="date" >
             </div>
             <div class="form-group">
               <label class="control-label">Your Address</label>
-              <textarea class="form-control white_bg" name="address" rows="4" ><?php echo htmlentities($result->Address);?></textarea>
+              <textarea class="form-control white_bg" style="border:1px solid black ;" name="address" rows="4" ><?php echo htmlentities($result->Address);?></textarea>
             </div>
             <div class="form-group">
               <label class="control-label">Country</label>
-              <input class="form-control white_bg"  id="country" name="country" value="<?php echo htmlentities($result->City);?>" type="text">
+              <input class="form-control white_bg" style="border:1px solid black ;"  id="country" name="country" value="<?php echo htmlentities($result->City);?>" type="text">
             </div>
             <div class="form-group">
               <label class="control-label">City</label>
-              <input class="form-control white_bg" id="city" name="city" value="<?php echo htmlentities($result->City);?>" type="text">
+              <input class="form-control white_bg" style="border:1px solid black ;" id="city" name="city" value="<?php echo htmlentities($result->City);?>" type="text">
             </div>
             <?php }} ?>
 
             <div class="form-group">
-              <button type="submit" name="updateprofile" class="btn">Save Changes <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
+              <button type="submit" name="updateprofile" class="btn">Save Changes </button>
             </div>
           </form>
         </div>

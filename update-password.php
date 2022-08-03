@@ -112,7 +112,7 @@ return true;
 <!-- /Switcher -->
 
 <!--Header-->
-<?php include('includes/header.php');?>
+<!-- <?php include('includes/header.php');?> -->
 <!-- /Header -->
 <!--Page Header-->
 <section class="page-header profile_page">
@@ -157,9 +157,9 @@ foreach($results as $result)
       </div>
     </div>
     <div class="row">
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-12 ">
         <?php include('includes/sidebar.php');?>
-      <div class="col-md-6 col-sm-8">
+      <div class="col-md-12" style="display: flex; justify-content: center; ">
         <div class="profile_wrap">
 <form name="chngpwd" method="post" onSubmit="return valid();">
 

@@ -50,7 +50,7 @@ include('includes/config.php');
 <!-- /Switcher -->
 
 <!--Header-->
-<?php include('includes/header.php');?>
+<!-- <?php include('includes/header.php');?> -->
                       <?php
 $pagetype=$_GET['type'];
 $sql = "SELECT type,detail,PageName from tblpages where type=:pagetype";

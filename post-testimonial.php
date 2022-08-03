@@ -20,7 +20,7 @@ $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
 {
-$msg="Testimonail submitted successfully";
+$msg="Feedback submitted successfully";
 }
 else
 {
@@ -37,7 +37,7 @@ $error="Something went wrong. Please try again";
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>Bike Rental Portal |Post testimonial</title>
+<title>Bike Rental Portal |Post Feedback</title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <!--Custome Style -->
@@ -92,18 +92,18 @@ $error="Something went wrong. Please try again";
 <!-- /Switcher -->
 
 <!--Header-->
-<?php include('includes/header.php');?>
+<!-- <?php include('includes/header.php');?> -->
 <!-- /Header -->
 <!--Page Header-->
 <section class="page-header profile_page">
   <div class="container">
     <div class="page-header_wrap">
       <div class="page-heading">
-        <h1>Post Testimonial</h1>
+        <h1>Post Feedback</h1>
       </div>
       <ul class="coustom-breadcrumb">
         <li><a href="#">Home</a></li>
-        <li>Post Testimonial</li>
+        <li>Post Feedback</li>
       </ul>
     </div>
   </div>
@@ -138,18 +138,18 @@ foreach($results as $result)
     </div>
 
     <div class="row">
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-12 col-sm-0">
         <?php include('includes/sidebar.php');?>
-      <div class="col-md-6 col-sm-8">
+      <div class="col-md-12 col-sm-0">
         <div class="profile_wrap">
-          <h5 class="uppercase underline">Post a Testimonial</h5>
+          <h5 class="uppercase underline" >Post a Feedback</h5>
             <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php }
         else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
           <form  method="post">
 
 
             <div class="form-group">
-              <label class="control-label">Testimonail</label>
+              <label class="control-label">Feedback</label>
               <textarea class="form-control white_bg" name="testimonial" rows="4" required=""></textarea>
             </div>
 

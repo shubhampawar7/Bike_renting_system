@@ -80,7 +80,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
 <!-- /Switcher -->
 
 <!--Header-->
-<?php include('includes/header.php');?>
+<!-- <?php include('includes/header.php');?> -->
 <!-- /Header -->
 
 <!--Listing-Image-Slider-->
@@ -125,7 +125,7 @@ $_SESSION['brndid']=$result->bid;
       </div>
       <div class="col-md-3">
         <div class="price_info">
-          <p>$<?php echo htmlentities($result->PricePerDay);?> </p>Per Day
+          <p>Rs <?php echo htmlentities($result->PricePerDay);?>.00</p>Per Day
 
         </div>
       </div>
@@ -288,15 +288,15 @@ $_SESSION['brndid']=$result->bid;
     $('#disable_past_b').attr('min', maxDate);
 
 });</script>
-          <form method="post">
+          <form method="post"   >
             <div class="form-group">
-              <input type="date" class="form-control" id="disable_past_a" name="fromdate" placeholder="From Date(dd/mm/yyyy)" required>
+              From date:<input type="date" class="form-control" id="disable_past_a" name="fromdate" placeholder="(From date)" required>
             </div>
             <div class="form-group">
-              <input  type="date" class="form-control" id="disable_past_b" name="todate" placeholder="To Date(dd/mm/yyyy)" required >
+              To date:<input  type="date" class="form-control" id="disable_past_b" name="todate" placeholder="To Date(dd/mm/yyyy)" required >
             </div>
             <div class="form-group">
-              <textarea rows="4" class="form-control" name="message" placeholder="Message" required></textarea>
+              <textarea rows="4" class="form-control" name="message" placeholder="Message" ></textarea>
             </div>
           <?php if($_SESSION['login'])
               {?>
