@@ -64,7 +64,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
           <address>
          12/B &nbsp Bhel Chowk , Near HDFC Bank,<br>
          IICMR College,<br>
-         nigdi,pune-411034<br>
+         Nigdi,pune-411034<br>
          INDIA.
       </address>
       
