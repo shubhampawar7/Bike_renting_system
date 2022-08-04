@@ -49,7 +49,7 @@ $msg="Testimonial Successfully Active";
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
 
-	<title>Bike Rental Portal |Admin Manage testimonials   </title>
+	<title>Bike Rental Portal |Admin Manage testimonials  </title>
 
 	<!-- Font awesome -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -99,11 +99,11 @@ $msg="Testimonial Successfully Active";
 				<div class="row">
 					<div class="col-md-12">
 
-						<h2 class="page-title">Manage Testimonials</h2>
+						<h2 class="page-title">Manage Feedback</h2>
 
 						<!-- Zero Configuration Table -->
 						<div class="panel panel-default">
-							<div class="panel-heading">User Testimonials</div>
+							<div class="panel-heading">User Feedback</div>
 							<div class="panel-body">
 							<?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php }
 				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
@@ -113,7 +113,7 @@ $msg="Testimonial Successfully Active";
 										<th>#</th>
 											<th>Name</th>
 											<th>Email</th>
-											<th>Testimonials</th>
+											<th>Feedback</th>
 											<th>Posting date</th>
 											<th>Action</th>
 										</tr>
@@ -123,7 +123,7 @@ $msg="Testimonial Successfully Active";
 										<th>#</th>
 											<th>Name</th>
 											<th>Email</th>
-											<th>Testimonials</th>
+											<th>Feedback</th>
 											<th>Posting date</th>
 											<th>Action</th>
 										</tr>

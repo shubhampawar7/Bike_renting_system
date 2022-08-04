@@ -46,10 +46,10 @@ include('includes/config.php');
 </head>
 <body>
 <<!-- Start Switcher -->
-<?php include('includes/colorswitcher.php');?>
+<!-- <?php include('includes/colorswitcher.php');?> -->
 <!-- /Switcher -->
 
-<!--Header-->
+<!--Header--> 
 <!-- <?php include('includes/header.php');?> -->
                       <?php
 $pagetype=$_GET['type'];

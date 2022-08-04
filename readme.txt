@@ -4,7 +4,7 @@ FIRST Download
 
 1.XAMPP
 
-2."TEXT EDITOR" NOTEPAD++ OR SUBLIME TEXT 3 / ETC.
+2."TEXT EDITOR" NOTEPAD++ OR SUBLIME TEXT 3 visual code / ETC.
 
 3"bikerental PHP"
 

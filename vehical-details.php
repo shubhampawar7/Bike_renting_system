@@ -144,9 +144,9 @@ $_SESSION['brndid']=$result->bid;
               <p>Fuel Type</p>
             </li>
 
-            <li> <i class="fa fa-user-plus" aria-hidden="true"></i>
+            <li> <i class="fa fa-motorcycle" aria-hidden="true"></i>
               <h5><?php echo htmlentities($result->SeatingCapacity);?></h5>
-              <p>Seats</p>
+              <p>Number Plate</p>
             </li>
           </ul>
         </div>
@@ -271,6 +271,7 @@ $_SESSION['brndid']=$result->bid;
           <div class="widget_heading">
             <h5><i class="fa fa-envelope" aria-hidden="true"></i>Book Now</h5>
             
+            
           </div>
           
           <script>$(function(){
@@ -304,14 +305,23 @@ $_SESSION['brndid']=$result->bid;
               {?>
               <div class="form-group">
                 <input type="submit" class="btn"  name="submit" value="Book Now">
+
               </div>
               <?php } else { ?>
 <a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login For Book</a>
 
               <?php } ?>
           </form>
+          <form action="payment.php" method="post" >
+
+              <div class="form-group">
+                <input type="submit" class="btn"  name="submit" value="  Payment">
+              </div>
+          </form>
+          
         </div>
       </aside>
+      
       <!--/Side-Bar-->
     </div>
 
@@ -340,11 +350,12 @@ foreach($results as $result)
             </div>
             <div class="product-listing-content">
               <h5><a href="vehical-details.php?vhid=<?php echo htmlentities($result->id);?>"><?php echo htmlentities($result->BrandName);?> , <?php echo htmlentities($result->VehiclesTitle);?></a></h5>
-              <p class="list-price">$<?php echo htmlentities($result->PricePerDay);?></p>
+              <p class="list-price">Rs<?php echo htmlentities($result->PricePerDay);?></p>
 
               <ul class="features_list">
 
-             <li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity);?> seats</li>
+             <li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity);?>Bike 
+            </li>
                 <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->ModelYear);?> model</li>
                 <li><i class="fa fa-car" aria-hidden="true"></i><?php echo htmlentities($result->FuelType);?></li>
               </ul>

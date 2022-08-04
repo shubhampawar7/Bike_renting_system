@@ -50,7 +50,7 @@ error_reporting(0);
       <div class="row">
         <div class="col-md-8 col-md-push-3">
           <div class="banner_content">
-            <h1 style="  margin-left: -123px; color:white; text-shadow: 0 0 3px black, 0 0 5px black;">Find Your Perfect bike</h1>
+            <h1 style="  color:white; text-shadow: 0 0 3px black, 0 0 5px black;">Find Your Perfect bike</h1>
             <!-- <p>We have more than a thousand bikes for you to choose. </p> -->
             <a href="#new" class="btn">Find Your Bike<span class="triangle-down primary"><i class="fa fa-search" aria-hidden="true"></i></span></a> </div>
         </div>
@@ -97,7 +97,7 @@ foreach($results as $result)
 <ul>
 <li><i class="fa fa-car" aria-hidden="true"></i><?php echo htmlentities($result->FuelType);?></li>
 <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->ModelYear);?> Model</li>
-<li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity);?> seats</li>
+<li><i class="fa fa-motorcycle" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity);?> seats</li>
 </ul>
 </div>
 <div class="car-title-m">
@@ -124,7 +124,7 @@ foreach($results as $result)
       <div class="col-lg-3 col-xs-6 col-sm-3">
         <div class="fun-facts-m">
           <div class="cell">
-            <h2><i class="fa fa-calendar" aria-hidden="true"></i>40+</h2>
+            <h2><i class="fa fa-calendar" aria-hidden="true"></i>10+</h2>
             <p>Years In Business</p>
           </div>
         </div>
@@ -132,16 +132,16 @@ foreach($results as $result)
       <div class="col-lg-3 col-xs-6 col-sm-3">
         <div class="fun-facts-m">
           <div class="cell">
-            <h2><i class="fa fa-motorcycle " aria-hidden="true"></i>1000+</h2>
-            <p>New Bikes For Sale</p>
+            <h2><i class="fa fa-motorcycle " aria-hidden="true"></i>200+</h2>
+            <p>New Bikes For Rent</p>
           </div>
         </div>
       </div>
       <div class="col-lg-3 col-xs-6 col-sm-3">
         <div class="fun-facts-m">
           <div class="cell">
-            <h2><i class="fa fa-motorcycle " aria-hidden="true"></i>999+</h2>
-            <p>Used Bikes For Sale</p>
+            <h2><i class="fa fa-motorcycle " aria-hidden="true"></i>15+</h2>
+            <p>Companies Bike Available</p>
           </div>
         </div>
       </div>
@@ -240,5 +240,4 @@ foreach($results as $result)
 
 </body>
 
-<!-- Mirrored from themes.webmasterdriver.net/carforyou/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 16 Jun 2017 07:22:11 GMT -->
 </html>

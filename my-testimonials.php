@@ -61,11 +61,11 @@ else{
   <div class="container">
     <div class="page-header_wrap">
       <div class="page-heading">
-        <h1>My Testimonials</h1>
+        <h1>My Feedback</h1>
       </div>
       <ul class="coustom-breadcrumb">
         <li><a href="#">Home</a></li>
-        <li>My Testimonials</li>
+        <li>My Feedback</li>
       </ul>
     </div>
   </div>
@@ -107,7 +107,7 @@ foreach($results as $result)
 
 
         <div class="profile_wrap">
-          <h5 class="uppercase underline">My Testimonials </h5>
+          <h5 class="uppercase underline">My Feedback </h5>
           <div class="my_vehicles_list">
             <ul class="vehicle_listing">
 <?php
