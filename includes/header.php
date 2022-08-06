@@ -15,7 +15,7 @@
             <div class="header_widgets">
               <div class="circle_icon"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
               <p class="uppercase_text"> Contact Us: </p>
-              <a href="tel:+639079373999">+91 7020567907</a> </div>
+              <a href="tel:+">+91 7020567907</a> </div>
         
    <?php   if(strlen($_SESSION['login'])==0)
 	{
@@ -37,7 +37,7 @@ echo "Welcome To Bike rental portal";
     <div class="container">
     
       <div class="navbar-header">
-       <div class="logo"> <a href="index.php"><img src="assets/images/logg2.png" alt="image"/></a> </div>
+       <!-- <div class="logo"> <a href="index.php"><img src="assets/images/logg2.png" alt="image"/></a> </div> -->
        
         <button id="menu_slide" data-target="#navigation" aria-expanded="false" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       </div>
@@ -92,7 +92,7 @@ foreach($results as $result)
 <?php }
 else{
 
-echo '<span style="color:red;  font-size: 17px;">'."CONTACT : 7020567907".'</span';
+echo '<span class="fa fa-phone"style="color:red;  font-size: 17px;">'." 7020567907".'</span';
 
  } ?>
             

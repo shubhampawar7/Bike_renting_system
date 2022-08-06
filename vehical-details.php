@@ -146,7 +146,7 @@ $_SESSION['brndid']=$result->bid;
 
             <li> <i class="fa fa-motorcycle" aria-hidden="true"></i>
               <h5><?php echo htmlentities($result->SeatingCapacity);?></h5>
-              <p>Number Plate</p>
+              <p>Seating</p>
             </li>
           </ul>
         </div>
@@ -157,6 +157,8 @@ $_SESSION['brndid']=$result->bid;
               <li role="presentation" class="active"><a href="#vehicle-overview " aria-controls="vehicle-overview" role="tab" data-toggle="tab">Vehicle Overview </a></li>
 
               <li role="presentation"><a href="#accessories" aria-controls="accessories" role="tab" data-toggle="tab">Accessories</a></li>
+              <!-- <li role="presentation"><a href="#Terms&condition" aria-controls="Terms&condition" role="tab" data-toggle="tab">Terms & Condition</a></li> -->
+
             </ul>
 
             <!-- Tab panes -->
@@ -166,10 +168,11 @@ $_SESSION['brndid']=$result->bid;
 
                 <p><?php echo htmlentities($result->VehiclesOverview);?></p>
               </div>
-
+             
 
               <!-- Accessories -->
               <div role="tabpanel" class="tab-pane" id="accessories">
+                
                 <!--Accessories-->
                 <table>
                   <thead>
@@ -257,6 +260,11 @@ $_SESSION['brndid']=$result->bid;
           </div>
 
         </div>
+        <!-- terms -->
+        <div class="container"><div class="row"><h5>Terms & Conditions</h5>
+
+        <span class="col-md-8">Documents Required:- Original Aadhar Card and Original Driving License.<br> The riders needs to present all the original documents at the time of pickup.<br> Fuel Charges are not included in the security deposit or rent. <br>In case of any damage to the vehicle, the customer is liable to pay the repair charges as per the Authorised Service Center.<br>   In case of any damage to the helmet, the customer is liable to pay the damage charges.</span>
+      </div></div>
 <?php }} ?>
 
       </div>
@@ -270,6 +278,7 @@ $_SESSION['brndid']=$result->bid;
         <div class="sidebar_widget">
           <div class="widget_heading">
             <h5><i class="fa fa-envelope" aria-hidden="true"></i>Book Now</h5>
+            <span style="color:red;">Note : Late penalty 500/day.</span>
             
             
           </div>
@@ -299,11 +308,11 @@ $_SESSION['brndid']=$result->bid;
               To date:<input  type="date" class="form-control" id="disable_past_b" name="todate" placeholder="To Date(dd/mm/yyyy)" required >
             </div>
             <div class="form-group">
-              <textarea rows="4" class="form-control" name="message" placeholder="Message" ></textarea>
+              Where you want to go :<textarea rows="3" class="form-control" name="message" placeholder="type here..." ></textarea>
             </div>
           <?php if($_SESSION['login'])
               {?>
-              <div class="form-group">
+              <div class="form-group">  
                 <input type="submit" class="btn"  name="submit" value="Book Now">
 
               </div>
@@ -314,9 +323,26 @@ $_SESSION['brndid']=$result->bid;
           </form>
           <form action="payment.php" method="post" >
 
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <input type="submit" class="btn"  name="submit" value="  Payment">
+              </div> -->
+              <?php if($_SESSION['login'])
+              {?>
+              <div class="form-group">
+                <input type="submit" class="btn"  name="submit" value="Payment">
+
               </div>
+              <?php } else { ?>
+<a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login For Payment</a>
+
+              <?php } ?>
+              <!-- <h5 style="text-align:center;">Terms & Conditions</h5>
+              <span style="color:black;"> Documents Required:- Original Aadhar Card and Original Driving License.
+ The riders needs to present all the original documents at the time of pickup.
+ Fuel Charges are not included in the security deposit or rent.
+ In case of any damage to the vehicle, the customer is liable to pay the repair charges as per the Authorised Service Center.
+ In case of any damage to the helmet, the customer is liable to pay the damage charges.</span>
+               -->
           </form>
           
         </div>

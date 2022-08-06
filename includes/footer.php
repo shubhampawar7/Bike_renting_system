@@ -50,8 +50,8 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
           <h4><span style="color:white;">Address :</span></h4>
          
          <address>
-        12/B &nbsp Bhel Chowk , Near HDFC Bank,<br>
-        IICMR College,<br>
+        12/B &nbsp IICMR MCA College 
+        Bhel Chowk , Near HDFC Bank,<br>
         Nigdi,pune-411034<br>
         INDIA.
      </address>
@@ -60,7 +60,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
         </div>
 
         <div class="col-md-6 col-sm-0">
-          <h6>Subscribe Newsletter</h6>
+          <h6>Subscribe </h6>
           <div class="newsletter-form">
             <form method="post">
               <div class="form-group">
@@ -68,7 +68,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
               </div>
               <button type="submit" name="emailsubscibe" class="btn btn-block">Subscribe <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
             </form>
-            <p class="subscribed-text">*We send great deals and latest auto news to our subscribed users very week.</p>
+            <p class="subscribed-text ">*We send great deals and latest offer to our subscribed users very week.</p>
           </div>     
             
         </div>

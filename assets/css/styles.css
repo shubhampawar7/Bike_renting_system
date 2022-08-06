@@ -302,13 +302,19 @@ blockquote {
 
 /* cancelled*/
 .btn.outline.active-btn-can {
-	border-color:#089901;
+	border-color:black;
 	color:red;
 }
 .btn.outline.active-btn-can:hover {
 	background:black;
 	color:red;
   
+}
+
+/* completed */
+.btn.outline.active-btn-com {
+	border-color:#089901;
+	color:green;
 }
 
 a,

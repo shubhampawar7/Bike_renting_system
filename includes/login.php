@@ -38,10 +38,10 @@ echo "<script type='text/javascript'> document.location = '$currentpage'; </scri
             <div class="col-md-12 col-sm-6">
               <form method="post">
                 <div class="form-group">
-                  <input type="email" class="form-control" name="email" placeholder="Email address*">
+                  <input type="email" class="form-control" name="email" placeholder="Email address*" required>
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" name="password" placeholder="Password*">
+                  <input type="password" class="form-control" name="password" placeholder="Password*" required>
                 </div>
                 <div class="form-group checkbox">
                   <input type="checkbox" id="remember">

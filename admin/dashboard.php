@@ -165,7 +165,21 @@ $subscribers=$query4->rowCount();
 										<div class="panel panel-default">
 											<div class="panel-body bk-success text-light">
 												<div class="stat-panel text-center">
+													<!-- try -->
+													<!-- <div class="stat-panel-number h1 "><?php echo htmlentities($subscribers);?></div>
+													<div class="stat-panel-title text-uppercase">available Bikes</div>
+												</div>
+											</div>
+											<a href="manage-subscribers.php" class="block-anchor panel-footer">Full Detail <i class="fa fa-arrow-right"></i></a>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="panel panel-default">
+											<div class="panel-body bk-success text-light">
+												<div class="stat-panel text-center"> -->
+													<!-- try -->
 												<?php
+
 $sql6 ="SELECT id from tblcontactusquery ";
 $query6 = $dbh -> prepare($sql6);;
 $query6->execute();
@@ -192,7 +206,7 @@ $testimonials=$query5->rowCount();
 ?>
 
 													<div class="stat-panel-number h1 "><?php echo htmlentities($testimonials);?></div>
-													<div class="stat-panel-title text-uppercase">Testimonials</div>
+													<div class="stat-panel-title text-uppercase">Feedback</div>
 												</div>
 											</div>
 											<a href="testimonials.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
@@ -200,10 +214,16 @@ $testimonials=$query5->rowCount();
 									</div>
 
 								</div>
+								
 							</div>
+							
 						</div>
+						
 					</div>
+					
 				</div>
+
+	
 
 
 
