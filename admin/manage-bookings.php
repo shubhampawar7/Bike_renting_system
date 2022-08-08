@@ -37,10 +37,15 @@ else if(isset($_REQUEST['beid']))
 	{
 $aeid=intval($_GET['beid']);
 $status=3;
+// $date = date('Format String', time());
+date_default_timezone_set('Asia/Kolkata');
+$date = date('y-m-d h:i:s');
 
-$sql = "UPDATE tblbooking SET Status=:status WHERE  id=:aeid";
+$sql = "UPDATE tblbooking SET Status=:status ,StartDate=:date WHERE  id=:aeid";
 $query = $dbh->prepare($sql);
 $query -> bindParam(':status',$status, PDO::PARAM_STR);
+$query -> bindParam(':date',$date, PDO::PARAM_STR);
+
 $query-> bindParam(':aeid',$aeid, PDO::PARAM_STR);
 $query -> execute();
 
@@ -50,10 +55,14 @@ else if(isset($_REQUEST['ceid']))
 	{
 $aeid=intval($_GET['ceid']);
 $status=4;
+date_default_timezone_set('Asia/Kolkata');
+$date = date('y-m-d h:i:s');
 
-$sql = "UPDATE tblbooking SET Status=:status WHERE  id=:aeid";
+$sql = "UPDATE tblbooking SET Status=:status ,CompletedDate=:date WHERE  id=:aeid";
 $query = $dbh->prepare($sql);
 $query -> bindParam(':status',$status, PDO::PARAM_STR);
+$query -> bindParam(':date',$date, PDO::PARAM_STR);
+
 $query-> bindParam(':aeid',$aeid, PDO::PARAM_STR);
 $query -> execute();
 
@@ -154,8 +163,8 @@ $msg="Booking Cancelled by user";
 											<th>From Date</th>
 											<th>To Date</th>
 											<th>message</th>
-											<!-- <th>StartDate</th>
-											<th>ComplatedDate</th> -->
+											<th>StartDate</th>
+											<th>ComplatedDate</th>
 											<th>Status</th>	
 											<th>Posting date</th>
 											<th>Action</th>
@@ -170,8 +179,8 @@ $msg="Booking Cancelled by user";
 											<th>To Date</th>
 											<th>message</th>
 
-											<!-- <th>StartDate</th>
-											<th>ComplatedDate</th> -->
+											<th>StartDate</th>
+											<th>ComplatedDate</th>
 											<th>Status</th>
 											<th>Posting date</th>
 											<th>Action</th>
@@ -180,7 +189,7 @@ $msg="Booking Cancelled by user";
 									<tbody>
 
 									<?php $sql = "SELECT tblusers.FullName,tblbrands.BrandName,
-									tblvehicles.VehiclesTitle,tblbooking.FromDate,tblbooking.ToDate,tblbooking.message,
+									tblvehicles.VehiclesTitle,tblbooking.FromDate,tblbooking.ToDate,tblbooking.message,tblbooking.StartDate,tblbooking.CompletedDate,
 									tblbooking.VehicleId,tblbooking.CompletedDate 
 									as vid,tblbooking.Status,tblbooking.PostingDate,tblbooking.id  
 									from tblbooking join tblvehicles on tblvehicles.id=tblbooking.VehicleId 
@@ -201,6 +210,10 @@ foreach($results as $result)
 											<td><?php echo htmlentities($result->FromDate);?></td>
 											<td><?php echo htmlentities($result->ToDate);?></td>
 											<td><?php echo htmlentities($result->message);?></td>
+											<td><?php echo htmlentities($result->StartDate);?></td>
+											<td><?php echo htmlentities($result->CompletedDate);?></td>
+
+
 											<td><?php
 if ($result->Status==1) {
     echo htmlentities('Confirmed');

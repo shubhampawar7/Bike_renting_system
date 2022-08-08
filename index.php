@@ -97,7 +97,7 @@ foreach($results as $result)
 <ul>
 <li><i class="fa fa-car" aria-hidden="true"></i><?php echo htmlentities($result->FuelType);?></li>
 <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->ModelYear);?> Model</li>
-<li><i class="fa fa-motorcycle" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity);?> seats</li>
+<li><i class="fa fa-motorcycle" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity);?> Available</li>
 </ul>
 </div>
 <div class="car-title-m">

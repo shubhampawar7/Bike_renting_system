@@ -2,8 +2,31 @@
 session_start();
 error_reporting(0);
 include('includes/config.php');
-?>
+if(isset($_POST['send']))
+  {
+$name=$_POST['fullname'];
+$email=$_POST['email'];
+$contactno=$_POST['contactno'];
+$amt=$_POST['amt'];
+$sql="INSERT INTO  tblpayment(name,EmailId,ContactNumber,Amt) VALUES(:name,:email,:contactno,:amt)";
+$query = $dbh->prepare($sql);
+$query->bindParam(':name',$name,PDO::PARAM_STR);
+$query->bindParam(':email',$email,PDO::PARAM_STR);
+$query->bindParam(':contactno',$contactno,PDO::PARAM_STR);
+$query->bindParam(':amt',$amt,PDO::PARAM_STR);
+$query->execute();
+$lastInsertId = $dbh->lastInsertId();
+if($lastInsertId)
+{
+$msg="Query Sent. We will check your payment shortly";
+}
+else
+{
+$error="Something went wrong. Please try again";
+}
 
+}
+?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -12,7 +35,7 @@ include('includes/config.php');
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>Bike Rental Portal | Page details</title>
+<title>BikeForYou - Responsive Bike Dealer HTML5 Template</title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <!--Custome Style -->
@@ -43,68 +66,131 @@ include('includes/config.php');
 <link rel="apple-touch-icon-precomposed" href="assets/images/favicon-icon/apple-touch-icon-57-precomposed.png">
 <link rel="shortcut icon" href="assets/images/favicon-icon/24x24.png">
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+ <style>
+    .errorWrap {
+    padding: 10px;
+    margin: 0 0 20px 0;
+    background: #fff;
+    border-left: 4px solid #dd3d36;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+.succWrap{
+    padding: 10px;
+    margin: 0 0 20px 0;
+    background: #fff;
+    border-left: 4px solid #5cb85c;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+    </style>
 </head>
 <body>
+
 <<!-- Start Switcher -->
-<!-- <?php include('includes/colorswitcher.php');?> -->
+<?php include('includes/colorswitcher.php');?>
 <!-- /Switcher -->
 
-<!--Header--> 
+<!--Header-->
 <!-- <?php include('includes/header.php');?> -->
+<!-- /Header -->
 
-<!-- try -->
-<div class="container">
-<div class="row" >
-				<div class="col-md-12 p-5 display-4 text-capitalize text-center"    >
-					<h3 class="text-white">Payment Gateway</h3>
-				</div>
-			</div>
-			<div class="row justify-content-center mt-4">
-				<div class="col-md-5">
-					<div class="card border-0">
-						<div class="card-header bg-white">
-							<h4 class="card-title">
-								Payment Checkout
-							</h4>
-						</div>
-						<div class="card-body">
-							<form action="pay.php" method="post">
-								<label for="">Name:</label>
-								<div class="form-group">
-									<input type="text" name="name" id="name" class="form-control" placeholder="Enter the name..." required>
-								</div>
-								<label for="">Email:</label>
-								<div class="form-group">
-									<input type="email" name="email" id="email" class="form-control" placeholder="Enter the email..." required>
-								</div>
-								<label for="">Phone No:</label>
-								<div class="form-group">
-									<input type="text" name="phone" id="phone" class="form-control" placeholder="Enter the phone..." required>
-								</div>
-								<label for="">Amount:</label>
-								<div class="form-group">
-									<input type="text" name="amt" id="amt" class="form-control" placeholder="Enter the Amount..." required>
-								</div>
-								<div class="form-group">
-									<button type="submit" name="payment" class="btn btn-dark btn-block font-weight-bold" onclick="validate()">Proccess</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>  
-
-
-                     
+<!--Page Header-->
+<section class="page-header contactus_page">
+  <div class="container">
+    <div class="page-header_wrap">
+      <div class="page-heading">
+        <h1>Payment</h1>
+      </div>
+      <ul class="coustom-breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li>Payment</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Dark Overlay-->
+  <div class="dark-overlay"></div>
 </section>
-<!-- /About-us-->
+<!-- /Page Header-->
+
+<!--Contact-us-->
+<section class="contact_us section-padding">
+  <div class="container">
+    <div  class="row">
+      
+      <div class="col-md-12  ">
+      <div class="col-md-10 col-sm-2 ">
+      <h3  style="text-align:center;">Payment Gateway</h3>
+        <!-- <h3>Get in touch using the form below</h3> -->
+          <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php }
+        else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
+        <div class="contact_form gray-bg" >
+          <form  method="post">
+            <div class="form-group">
+              <label class="control-label">Full Name <span>*</span></label>
+              <input type="text" name="fullname" class="form-control white_bg" id="fullname" required>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Email Address <span>*</span></label>
+              <input type="email" name="email" class="form-control white_bg" id="emailaddress" required>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Phone Number <span>*</span></label>
+              <input type="text" name="contactno" class="form-control white_bg" id="phonenumber" required>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Amount <span>*</span></label>
+              <!-- <textarea class="form-control white_bg" name="message" required></textarea> -->
+              <input type="text" name="amt" class="form-control white_bg" id="amt" required>
+
+            </div>
+            <div class="form-group">
+              <button class="btn" type="submit" name="send" value=" <h5><?php echo htmlentities($result->PricePerDay);?></h5>" type="submit">Make Payment<span ><i aria-hidden="true"></i></span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    
+      <div class="col-md-6">
+        <h3></h3>
+        <div class="contact_detail">
+            
+            <?php
+$pagetype=$_GET['type'];
+$sql = "SELECT Address,EmailId,ContactNo from tblpayment";
+$query = $dbh -> prepare($sql);
+$query->bindParam(':pagetype',$pagetype,PDO::PARAM_STR);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$cnt=1;
+if($query->rowCount() > 0)
+{
+foreach($results as $result)
+{ ?>
+          <ul>
+            <li>
+              <div class="icon_wrap"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+              <div class="contact_info_m"><?php   echo htmlentities($result->Address); ?></div>
+            </li>
+            <li>
+              <div class="icon_wrap"><i class="fa fa-phone" aria-hidden="true"></i></div>
+              <div class="contact_info_m"><a href="tel:61-1234-567-90"><?php   echo htmlentities($result->EmailId); ?></a></div>
+            </li>
+            <li>
+              <div class="icon_wrap"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+              <div class="contact_info_m"><a href="mailto:codeprojectsorg@gmail.com"><?php   echo htmlentities($result->ContactNo); ?></a></div>
+            </li>
+          </ul>
+        <?php }} ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Contact-us-->
 
 
-
-
-
-<<!--Footer -->
+<!--Footer -->
 <?php include('includes/footer.php');?>
 <!-- /Footer-->
 
@@ -139,5 +225,5 @@ include('includes/config.php');
 
 </body>
 
-<!-- Mirrored from themes.webmasterdriver.net/carforyou/demo/about-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 16 Jun 2017 07:26:12 GMT -->
+<!-- Mirrored from themes.webmasterdriver.net/carforyou/demo/contact-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 16 Jun 2017 07:26:55 GMT -->
 </html>

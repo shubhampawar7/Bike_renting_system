@@ -151,11 +151,15 @@ foreach($results as $result)
                 <?php if($result->Status==1)
                 { ?>
                 <div class="vehicle_status"> <a href="#" class="btn outline btn-xs active-btn" alert="con">Confirmed</a>
+                <a href="payment.php?eid=<?php echo htmlentities($result->id);?>" class="btn outline btn-xs active-btn" onclick="return confirm('Do you really want to payment for this booking')"> Payment</a>
+
                            <div class="clearfix"></div>
                            <b style="color:green;">Contact Owner : 7020567907</b>
                            <b style="color:blue;">Address : 12/B IICMR MCA College, Bhel Chowk ,Near HDFC Bank,Nidgi ,pune-411034, INDIA.</b><br>
                            <!-- <a href="#" class="btn outline btn-xs active-btn-can">Cancel</a> -->
                            <a href="my-booking.php?eid=<?php echo htmlentities($result->id);?>" class="btn outline btn-xs active-btn" onclick="return confirm('Do you really want to Cancel this Booking')"> Cancel</a>
+                           <!-- <a href="payment.php?eid=<?php echo htmlentities($result->id);?>" class="btn outline btn-xs active-btn" onclick="return confirm('Do you really want to payment for this booking')"> Payment</a> -->
+
 
                            
         </div>
@@ -171,6 +175,8 @@ foreach($results as $result)
         <!-- bike issued -->
         <?php } else if($result->Status==3) { ?>
  <div class="vehicle_status"> <a href="#" class="btn outline btn-xs active-btn-com">On Going</a>
+ <a href="payment.php?eid=<?php echo htmlentities($result->id);?>" class="btn outline btn-xs active-btn" onclick="return confirm('Do you really want to payment for this booking')"> Payment</a>
+
 
             <div class="clearfix"></div>
             <b class="fa fa-motorcycle" style="color:green;">Your Trip is Ongoing...</b>
@@ -178,6 +184,7 @@ foreach($results as $result)
 <!-- completed booking -->
         <?php } else if($result->Status==4) { ?>
  <div class="vehicle_status"> <a href="#" class="btn outline btn-xs active-btn-com">Completed</a>
+ 
 
             <div class="clearfix"></div>
             <b class="fa fa-check" style="color:green;">Completed Your Trip...</b>

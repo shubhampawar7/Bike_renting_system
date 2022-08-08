@@ -146,7 +146,7 @@ $_SESSION['brndid']=$result->bid;
 
             <li> <i class="fa fa-motorcycle" aria-hidden="true"></i>
               <h5><?php echo htmlentities($result->SeatingCapacity);?></h5>
-              <p>Seating</p>
+              <p>Available</p>
             </li>
           </ul>
         </div>
@@ -300,6 +300,7 @@ $_SESSION['brndid']=$result->bid;
     $('#disable_past_b').attr('min', maxDate);
 
 });</script>
+
           <form method="post"   >
             <div class="form-group">
               From date:<input type="date" class="form-control" id="disable_past_a" name="fromdate" placeholder="(From date)" required>
@@ -329,7 +330,7 @@ $_SESSION['brndid']=$result->bid;
               <?php if($_SESSION['login'])
               {?>
               <div class="form-group">
-                <input type="submit" class="btn"  name="submit" value="Payment">
+                <input type="submit" class="btn"  name="submit" onclick="return confirm('Do you really want payment')" value="Payment">
 
               </div>
               <?php } else { ?>

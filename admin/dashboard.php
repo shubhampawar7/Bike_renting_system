@@ -211,8 +211,27 @@ $testimonials=$query5->rowCount();
 											</div>
 											<a href="testimonials.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
+										</div>
+									<div class="col-md-3">
+										<div class="panel panel-default">
+											<div class="panel-body bk-info text-light">
+												<div class="stat-panel text-center">
+										
+										<?php
+$sql1 ="SELECT id from tblpayment ";
+$query1 = $dbh -> prepare($sql1);;
+$query1->execute();
+$results1=$query1->fetchAll(PDO::FETCH_OBJ);
+$totalvehicle=$query1->rowCount();
+?>
+													<div class="stat-panel-number h1 "><?php echo htmlentities($totalvehicle);?></div>
+													<div class="stat-panel-title text-uppercase"> Total Payment</div>
+												</div>
+											</div>
+											<a href="manage-payment.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
+										</div>
 									</div>
-
+									
 								</div>
 								
 							</div>
